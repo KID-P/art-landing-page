@@ -1,0 +1,89 @@
+@keyframes blink {
+  20% {
+    aspect-ratio: 1.99;
+  }
+  50% {
+    aspect-ratio: 20;
+  }
+  80% {
+    aspect-ratio: 1000000;
+  }
+}
+
+body {
+  background-color: rgb(10 10 10);
+  display: grid;
+  grid-template-columns: 1fr;
+  height: 100vh;
+  margin: 0px;
+  overflow: hidden;
+  place-items: center;
+  width: 100vw;
+}
+
+.svg {
+  position: absolute;
+  width: 0;
+  height: 0;
+}
+
+#wrapper {
+  aspect-ratio: 1.618;
+  background-color: rgb(37 41 92);
+  background-image: url("images/background.png");
+  background-size: cover;
+  max-height: 669px;
+  max-width: 1439px;
+  overflow: hidden;
+  position: relative;
+  width: 90%;
+}
+
+#eye {
+  aspect-ratio: 1;
+  background-color: rgb(10 10 10);
+  border-radius: 50%;
+  height: 99.99%;
+  left: 50%;
+  top: 50%;
+  position: absolute;
+  transform: translate(-50%, -50%);
+}
+
+#sclera {
+  aspect-ratio: 1.99;
+  background-color: rgb(178 163 236);
+  width: 99.99%;
+  left: 50%;
+  top: 50%;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  -webkit-clip-path: url(#sclera-shape);
+  clip-path: url(#sclera-shape);
+  animation-name: blink;
+  animation-duration: 5s;
+  animation-delay: 10s;
+  animation-iteration-count: infinite;
+}
+
+#iris {
+  aspect-ratio: 1;
+  background-color: rgb(10 10 10);
+  border-radius: 50%;
+  height: 170px;
+  left: 70%;
+  top: 70%;
+  position: absolute;
+  transform: translate(-50%, -50%);
+}
+
+#pupil {
+  aspect-ratio: 1;
+  background-color: rgb(250, 247, 247);
+  border-radius: 50%;
+  height: 70%;
+  left: 50%;
+  top: 50%;
+  position: absolute;
+  transform: translate(-50%, -50%);
+}
