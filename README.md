@@ -1,2 +1,2 @@
-# art-landing-page
+# art-landing-pages
  
